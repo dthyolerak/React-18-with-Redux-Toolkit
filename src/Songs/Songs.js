@@ -33,23 +33,39 @@ export const SongList = () => {
     <div className='song-list'>
       <h2>Songs list</h2>
       <div className='songs-contain'>
-        <Song img={song1.img} title={song1.title} artist={song1.artist} />
-        <Song img={song2.img} title={song2.title} artist={song2.artist} />
-        <Song img={song3.img} title={song3.title} artist={song3.artist} />
-        <Song img={song4.img} title={song4.title} artist={song4.artist} />
-        <Song img={song5.img} title={song5.title} artist={song5.artist} />
+        <Song img={song1.img} title={song1.title} artist={song1.artist}>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <button>Click Me</button>
+        </Song>
+        <Song img={song2.img} title={song2.title} artist={song2.artist}>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <button>Click Me</button>
+        </Song>
+        <Song img={song3.img} title={song3.title} artist={song3.artist}>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <button>Click Me</button>
+        </Song>
+        <Song img={song4.img} title={song4.title} artist={song4.artist}>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <button>Click Me</button>
+        </Song>
+        <Song img={song5.img} title={song5.title} artist={song5.artist}>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <button>Click Me</button>
+        </Song>
       </div>
     </div>
   )
 }
 
-const Song = ({img, artist, title}) => {
+const Song = ({img, artist, title, children}) => {
     // const  {img, artist, title} = props;
   return (
     <div className='song'>
       <img src={img} alt={title} />
       <h2> {title} </h2>
       <p>{artist}</p>
+      {children}
     </div>
   )
 }
