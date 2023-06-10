@@ -1,25 +1,29 @@
 import React from 'react'
 import ReactDom from 'react-dom/client'
+import './index.css'
 
 const SongList = () => {
   return (
-    <section>
-      <Song />
-      <Song />
-      <Song />
-      <Song />
-      <Song />
+    <section className='song-list'>
+      <h1 className='main-title'>List of new Songs</h1>
+      <div className='songs-contain'>
+        <Song />
+        <Song />
+        <Song />
+        <Song />
+        <Song />
+      </div>
     </section>
   )
 }
 
 const Song = () => {
   return (
-    <>
+    <div className='song'>
       <Artwork />
       <Title />
       <Artist />
-    </>
+    </div>
   )
 }
 
