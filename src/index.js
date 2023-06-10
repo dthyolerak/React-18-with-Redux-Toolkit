@@ -18,28 +18,20 @@ const SongList = () => {
 }
 
 const Song = () => {
+  const title = 'El Vert - unlock'
+  const artist = 'Vert - unlock ft Co musiq'
+  const img = 'https://mvaka.com/media/Malawi/profile1384267590/[mvaka]-El-Vert---unlock--[downloaded-on-mvaka-music-website].jpeg'
   return (
     <div className='song'>
-      <Artwork />
-      <Title />
-      <Artist />
+      <img
+        src={img}
+        alt={title}
+      />
+      <h2 style={{ color: 'red' }}> {title} </h2>
+      <p> {artist} </p>
     </div>
   )
 }
 
-const Artwork = () => (
-  <img
-    src='https://mvaka.com/media/Malawi/profile1384267590/[mvaka]-El-Vert---unlock--[downloaded-on-mvaka-music-website].jpeg'
-    alt='El Vert - unlock'
-  />
-)
-const Title = () => <h2 style={{color:"red"}}>El Vert - unlock</h2>
-const Artist = () => {
-  const inlineCss =  {
-      color: 'green',
-      fontSize: '17px'
-    }
-  return <p style={inlineCss}>Vert - unlock ft Co musiq</p>
-}
 const root = ReactDom.createRoot(document.getElementById('root'))
 root.render(<SongList />)
