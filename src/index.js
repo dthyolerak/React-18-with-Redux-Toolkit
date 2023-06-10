@@ -1,23 +1,37 @@
 import React from 'react'
 import ReactDom from 'react-dom/client'
 
-const Home = () => {
-  return <>
-  <Person />
-  <Message/>
-  </>
+const SongList = () => {
+  return (
+    <section>
+      <Song />
+      <Song />
+      <Song />
+      <Song />
+      <Song />
+    </section>
+  )
 }
-// const Home = () => {
-//   return React.createElement(
-//     'div',
-//     {},
-//     React.createElement('h1', {}, 'hello world')
-//   )
-// }
 
-const Person = ()=> <h1>Donnex Kamsonga</h1>
-const Message = () =>{
-  return <p>This is simple message</p>
+const Song = () => {
+  return (
+    <>
+      <Artwork />
+      <Title />
+      <Artist />
+    </>
+  )
+}
+
+const Artwork = () => (
+  <img
+    src='https://mvaka.com/media/Malawi/profile1384267590/[mvaka]-El-Vert---unlock--[downloaded-on-mvaka-music-website].jpeg'
+    alt='El Vert - unlock'
+  />
+)
+const Title = () => <h2>El Vert - unlock</h2>
+const Artist = () => {
+  return <h3>Vert - unlock ft Co musiq</h3>
 }
 const root = ReactDom.createRoot(document.getElementById('root'))
-root.render(<Home />)
+root.render(<SongList />)
