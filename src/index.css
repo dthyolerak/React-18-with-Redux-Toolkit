@@ -38,11 +38,14 @@ body{
 .song{
     max-width: 400px;
     text-align: center;
+    background: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
 }
 
 .song h2{
     font-size: 17px;
 }
 .song p{
-    font-size: 14px;
+    font-size: 15px;
 }

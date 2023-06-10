@@ -33,9 +33,13 @@ const Artwork = () => (
     alt='El Vert - unlock'
   />
 )
-const Title = () => <h2>El Vert - unlock</h2>
+const Title = () => <h2 style={{color:"red"}}>El Vert - unlock</h2>
 const Artist = () => {
-  return <h3>Vert - unlock ft Co musiq</h3>
+  const inlineCss =  {
+      color: 'green',
+      fontSize: '17px'
+    }
+  return <p style={inlineCss}>Vert - unlock ft Co musiq</p>
 }
 const root = ReactDom.createRoot(document.getElementById('root'))
 root.render(<SongList />)
