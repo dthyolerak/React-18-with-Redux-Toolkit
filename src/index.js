@@ -1,11 +1,15 @@
-import ReactDOM from "react-dom/client"
-import { SongList } from "./Songs/Songs"
+import ReactDom from "react-dom/client"
+import Songs from "./Songs/Songs"
+import Events from "./Events/Events"
 import "./index.css"
 const App = () => {
   return (
-    <SongList/>
+    <div>
+      <Events />
+      <Songs/>
+      </div>
   )
 }
-const app = ReactDOM.createRoot(document.getElementById('root'))
 
+const app = ReactDom.createRoot(document.getElementById('donnex'))
 app.render(<App/>)

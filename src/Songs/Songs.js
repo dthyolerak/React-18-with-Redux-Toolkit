@@ -36,39 +36,27 @@ const songs = [
     img: 'https://mvaka.com/media/Malawi/profile1384267590/[mvaka]-STYLE-YANGA-BY-JEBREEH-%7C--GENOHTYPE-MUSIC-%F0%9F%8E%B5-PRESENT--[downloaded-on-mvaka-music-website].jpeg',
   },
 ]
-//  const songList = songs.map((song)=>{
-//     return (
-//       <div className='song'>
-//         <img src={song.img} alt={song.title} />
-//         <h2> {song.title} </h2>
-//         <p>{song.artist}</p>
-//       </div>
-//     )
-//  })
-export const SongList = () => {
+
+const Songs = () => {
   return (
     <div className='song-list'>
-      <h2>Songs list</h2>
+      <h2>Song list</h2>
       <div className='songs-contain'>
         {songs.map((song) => {
-          const { title, img, artist, id } = song
-          //   return <Song title={title} img={img} artist={artist} key={id}/>
-          //   return <Song song={song} key={song.book} />
           return <Song {...song} key={song.id} />
         })}
-        {/* {songList} */}
       </div>
     </div>
   )
 }
+export default Songs
 
-const Song = ({ img, artist, title, id, children }) => {
-  // const  {img, artist, title} = props;
+const Song = ({ img, title, artist }) => {
   return (
     <div className='song'>
       <img src={img} alt={title} />
       <h2> {title} </h2>
-      <p>{artist}</p>
+      <p> {artist} </p>
     </div>
   )
 }
