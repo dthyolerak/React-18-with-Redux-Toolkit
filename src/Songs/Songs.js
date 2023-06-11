@@ -37,26 +37,31 @@ const songs = [
   },
 ]
 
-const Songs = () => {
-  return (
-    <div className='song-list'>
-      <h2>Song list</h2>
-      <div className='songs-contain'>
-        {songs.map((song) => {
-          return <Song {...song} key={song.id} />
+const Songs = ()=>{
+  
+    return <div className='song-list'>
+      <h2>List of All songs</h2>
+      <div className="songs-contain">
+        {songs.map((song)=>{
+        return  <Song {...song} key={song.id} />
         })}
       </div>
     </div>
-  )
+  
 }
 export default Songs
+const Song = ({id, artist, title, img})=>{
+  const GetSong = (id) =>{
+    const song = songs.find((song)=>song.id === id)
+    console.log(song);
+  }
 
-const Song = ({ img, title, artist }) => {
-  return (
-    <div className='song'>
-      <img src={img} alt={title} />
-      <h2> {title} </h2>
-      <p> {artist} </p>
-    </div>
-  )
+  // const displaySong = ()=>{
+  //   GetSong(id)
+  // }
+  return <div className="song">
+    <img src={img} alt={title} />
+    <h2 onClick={()=>{GetSong(id)}}> {title} </h2>
+    <h4> {artist} </h4>
+  </div>
 }
