@@ -1,6 +1,4 @@
-# React-fundamental
-## You can visit final work here
-- list-of-songs-mw.netlify.app
+# React-fundamental to Advance
 #### Folder Structure
 
 - node_modules
